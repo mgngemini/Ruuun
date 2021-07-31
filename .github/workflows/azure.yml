@@ -20,8 +20,8 @@ on:
     types: [created]
 
 env:
-  AZURE_WEBAPP_NAME: Ruuun    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: /home/runner/work/Ruuun/Ruuun/package.json   # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_NAME: 'Ruuun'    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '/home/runner/work/Ruuun/Ruuun/package.json'   # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
     environment: production
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.NODE_VERSION }}
+    - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node_version }}
