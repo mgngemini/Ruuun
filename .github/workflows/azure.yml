@@ -16,13 +16,13 @@
 # For more information on GitHub Actions for Azure, refer to https://github.com/Azure/Actions
 # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
 on: Windows
-  release: Ruuun 1.0
+ release: Ruuun 2.0
     types: [created]
 
 env:
   AZURE_WEBAPP_NAME: Ruuun    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: C:\Users\pdevi\source\repos\Ruuun\Ruuun\bin\Debug\netcoreapp3.1\Ruuun.dll # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '14.x'                # set this to the node version to use
+  AZURE_WEBAPP_PACKAGE_PATH: /home/runner/work/Ruuun/Ruuun/package.json   # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: 14.x                # set this to the node version to use
 
 jobs:
   build-and-deploy:
